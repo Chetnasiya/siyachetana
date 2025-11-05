@@ -1,7 +1,7 @@
 import java.util.Scanner;
 abstract class Shape{
     double length,breadth,base,height,rectArea,triArea;
-    abstract void computer_area();
+    abstract void compute_area();
     
 }
 class Rectangle extends Shape{
@@ -9,7 +9,7 @@ class Rectangle extends Shape{
     length=l;
     breadth=b;
     }
-    void computer_area(){
+    void compute_area(){
         rectArea=length*breadth;
         System.out.println("Area of rectangle: "+rectArea);
     }
@@ -19,7 +19,7 @@ class Triangle extends Shape{
         base=bs;
         height=h;
     }
-    void computer_area(){
+    void compute_area(){
         triArea=0.5*base*height;
         System.out.println("Area of rectangle: "+triArea);
     }
@@ -38,7 +38,8 @@ public class calculation{
 
         Shape r1=new Rectangle(l,b);
         Shape r2=new Triangle(bs,h);
-        r1.computer_area();
-        r2.computer_area();
+        r1.compute_area();
+        r2.compute_area();
     }
+
 }
